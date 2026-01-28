@@ -14,9 +14,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Login to Helm Registry (SPN)
+      - name: Login to Helm Registry (SPN)  # ashwintjamesregistry.azurecr.io
         run: |
-          helm registry login ${{ secrets.ACR_LOGIN_SERVER }} \
+          helm registry login ${{ secrets.ACR_LOGIN_SERVER }} \    
             --username ${{ secrets.AZURE_CLIENT_ID }} \
             --password ${{ secrets.AZURE_CLIENT_SECRET }}
 
